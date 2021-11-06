@@ -25,15 +25,13 @@ public class ApplicationKeywords extends ValidationKeywords{
 	public ApplicationKeywords() {	
 	
 	try {
-		
+				
 		prop =new Properties();
-		String path = System.getProperty("user.dir")+"//src//main//resources//project.properties";
-		System.out.println(path);
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//project.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//project.properties");
 		prop.load(fis);
 		
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
+	
 		e.printStackTrace();
 	}
 	

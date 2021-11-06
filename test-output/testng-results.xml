@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-03T17:49:37 IST" name="Default suite" finished-at="2021-11-03T17:49:49 IST" duration-ms="12361">
+  <suite started-at="2021-11-06T13:48:22 IST" name="Booking Suite" finished-at="2021-11-06T13:48:22 IST" duration-ms="54">
     <groups>
     </groups>
-    <test started-at="2021-11-03T17:49:37 IST" name="Default test" finished-at="2021-11-03T17:49:49 IST" duration-ms="12361">
-      <class name="com.selenium.ddf.testcases.LoginTest">
-        <test-method signature="loginTest()[pri:0, instance:com.selenium.ddf.testcases.LoginTest@409bf450]" started-at="2021-11-03T17:49:37 IST" name="loginTest" finished-at="2021-11-03T17:49:49 IST" duration-ms="12327" status="PASS">
+    <test started-at="2021-11-06T13:48:22 IST" name="Test Booking @ NODiscount" finished-at="2021-11-06T13:48:22 IST" duration-ms="54">
+      <class name="hotelbooking.BookHotel">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:hotelbooking.BookHotel@17211155]" started-at="2021-11-06T13:48:22 IST" name="beforeTest" finished-at="2021-11-06T13:48:22 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- com.selenium.ddf.testcases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeTest -->
+        <test-method signature="bookingComplete()[pri:0, instance:hotelbooking.BookHotel@17211155]" started-at="2021-11-06T13:48:22 IST" name="bookingComplete" finished-at="2021-11-06T13:48:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookingComplete -->
+        <test-method signature="searchHotel()[pri:0, instance:hotelbooking.BookHotel@17211155]" started-at="2021-11-06T13:48:22 IST" name="searchHotel" finished-at="2021-11-06T13:48:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method signature="selectHotel()[pri:0, instance:hotelbooking.BookHotel@17211155]" started-at="2021-11-06T13:48:22 IST" name="selectHotel" finished-at="2021-11-06T13:48:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectHotel -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:hotelbooking.BookHotel@17211155]" started-at="2021-11-06T13:48:22 IST" name="afterTest" finished-at="2021-11-06T13:48:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- hotelbooking.BookHotel -->
+      <class name="hotelbooking.PaymentMethods">
+        <test-method signature="payCash()[pri:0, instance:hotelbooking.PaymentMethods@52525845]" started-at="2021-11-06T13:48:22 IST" name="payCash" finished-at="2021-11-06T13:48:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payCash -->
+        <test-method signature="applyDiscount()[pri:0, instance:hotelbooking.PaymentMethods@52525845]" started-at="2021-11-06T13:48:22 IST" name="applyDiscount" finished-at="2021-11-06T13:48:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyDiscount -->
+        <test-method signature="payonline()[pri:0, instance:hotelbooking.PaymentMethods@52525845]" started-at="2021-11-06T13:48:22 IST" name="payonline" finished-at="2021-11-06T13:48:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payonline -->
+      </class> <!-- hotelbooking.PaymentMethods -->
+    </test> <!-- Test Booking @ NODiscount -->
+  </suite> <!-- Booking Suite -->
 </testng-results>

@@ -93,6 +93,7 @@ public class GenericKeywords extends UtilityKeywords{
 		
 		public void navigate(String url) {
 			driver.get(getElement(url));
+			//driver.get(url);
 		}
 		
 		public void click(String locator) {

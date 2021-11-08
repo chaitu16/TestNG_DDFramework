@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.ddf.testcases.LoginTest">
+      <class name="testcases.rediff.PortfolioManagement">
         <methods>
-          <include name="loginTest" invocation-numbers="0"/>
+          <include name="createPortfolio"/>
         </methods>
-      </class> <!-- com.selenium.ddf.testcases.LoginTest -->
+      </class> <!-- testcases.rediff.PortfolioManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

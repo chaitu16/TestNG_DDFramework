@@ -19,12 +19,18 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 public class GenericKeywords extends UtilityKeywords{
 	
+	public ExtentTest test;
+	public SoftAssert softAssert;
 	
 	public WebDriver openBrowser(String browserName){
-		
+	
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "logs/chrome.log");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
@@ -94,6 +100,7 @@ public class GenericKeywords extends UtilityKeywords{
 		public void navigate(String url) {
 			driver.get(getElement(url));
 			//driver.get(url);
+			
 		}
 		
 		public void click(String locator) {
@@ -116,7 +123,24 @@ public class GenericKeywords extends UtilityKeywords{
 				}
 			}
 			
+			
 		}
+		
+		
+		public void log(String msg) {
+			test.log(Status.INFO, msg);
+		}
+		
+		public void reportFail() {
+			softAssert.fail();
+		}
+		
+		
+		public void assertAll() {
+			softAssert.assertAll();
+		}
+		
+		
 		
 
 }

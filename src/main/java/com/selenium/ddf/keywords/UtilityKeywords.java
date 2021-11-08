@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UtilityKeywords {
 	
-	 public static WebDriver driver;
-	 public static Properties prop;
+	 public  WebDriver driver;
+	 public  Properties prop;
 	
 	 
 	public WebElement findDriverElement(String locatorKey) {			

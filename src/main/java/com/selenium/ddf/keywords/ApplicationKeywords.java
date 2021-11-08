@@ -18,12 +18,18 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 public class ApplicationKeywords extends ValidationKeywords{
 	
+		
 	
-	public ApplicationKeywords() {	
-	
+	public ApplicationKeywords(ExtentTest test) {	
+		this.test =test;
+		
 	try {
 				
 		prop =new Properties();
@@ -34,6 +40,9 @@ public class ApplicationKeywords extends ValidationKeywords{
 	
 		e.printStackTrace();
 	}
+	
+	softAssert = new SoftAssert();
+	
 	
 }
 

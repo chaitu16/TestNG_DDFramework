@@ -4,14 +4,16 @@ import com.selenium.ddf.keywords.GenericKeywords;
 import com.selenium.ddf.keywords.UtilityKeywords;
 import com.selenium.ddf.keywords.ValidationKeywords;
 
+import testbase.BaseTest;
+
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.selenium.ddf.keywords.ApplicationKeywords;
 
-public class LoginTest extends  ApplicationKeywords  {
-	
+public class LoginTest extends  BaseTest  {
 	
 	@Test	
 	// @Parameters({"browser","url"})
@@ -25,11 +27,11 @@ public class LoginTest extends  ApplicationKeywords  {
 //		Thread.sleep(3000);
 //		selectItem("ul_list_css", "38.5");
 		
-		openBrowser("chrome");
-		navigate("url");
-		inputText("useremail_id","useremail");
-		inputText("password_id","password");
-		click("submit_id");
+		app.openBrowser("chrome");
+		app.navigate("url");
+		app.inputText("useremail_id","useremail");
+		app.inputText("password_id","password");
+		app.click("submit_id");
 		
 		
 		

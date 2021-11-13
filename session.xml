@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="LoginCreateSuite"  >
+<listeners>
+<listener class-name="listener.MyListener"></listener>
+</listeners>
 
-  <test name="Login Test"   >  
+  <test name="Login Create Portfolio Test"   >  
   
-    <classes> 
-        
-      <class name="testcases.rediff.Session" >
+    <classes>         
+     <class name="testcases.rediff.Session" >
       	<methods>
       		<include name = "doLogin" />      		
       	</methods>
@@ -16,11 +18,29 @@
       	<methods>
      	 	<include name = "createPortfolio" />
       	</methods>
-      </class>     
-                
+      </class>                   
     </classes>
     
   </test> <!-- Login  Test -->
   
+  <!--  
+   <test name="Delete Portfolio Test"   >  
   
+    <classes>     
+      <class name="testcases.rediff.Session" >
+      	<methods>
+      		<include name = "doLogin" />      		
+      	</methods>
+      	
+      </class>    
+      <class name="testcases.rediff.PortfolioManagement" >
+      	<methods>
+      		<include name = "deletePortfolio" />      		
+      	</methods>
+      </class>    
+    </classes>
+    
+  </test> 
+  
+  -->
 </suite> <!-- LoginSuite -->

@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.rediff.PortfolioManagement">
+      <class name="testcases.rediff.Session">
         <methods>
-          <include name="createPortfolio"/>
+          <include name="beforeMethod"/>
+          <include name="doLogin"/>
+          <include name="quit"/>
+          <include name="doLogout"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- testcases.rediff.PortfolioManagement -->
+      </class> <!-- testcases.rediff.Session -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

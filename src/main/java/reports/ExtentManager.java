@@ -10,6 +10,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentManager {
 	
 	static ExtentReports reports;
+	public static String screenShotsFolder;
+	
 	
 	public static ExtentReports getReports() {
 		
@@ -20,10 +22,10 @@ public class ExtentManager {
 			
 			String path = d.toString().replaceAll(":", "-") +"//screenshots";
 			
-			String screenShotsFolder =  System.getProperty("user.dir") +"//reports//"+"report - "+path;
-			String reportsFolder = System.getProperty("user.dir") +"//reports//"+"report - "+d.toString().replaceAll(":", "-");
-			File f = new File(screenShotsFolder);
-			f.mkdirs();
+			 screenShotsFolder =  System.getProperty("user.dir") +"//reports//"+path;
+			 String reportsFolder = System.getProperty("user.dir") +"//reports//"+d.toString().replaceAll(":", "-");
+			 File f = new File(screenShotsFolder);
+			 f.mkdirs();
 			
 			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportsFolder);
 			
@@ -41,21 +43,3 @@ public class ExtentManager {
 	}
 
 }
-
-
-
-/*
-
-Date d = new Date();
-
-String reportsFolder=d.toString().replaceAll(":", "-") +"//screenshots";
-
-screenshotFolderPath = System.getProperty("user.dir") +"//reports//"+reportsFolder;
-String reportFolderPath = System.getProperty("user.dir") +"//reports//"+d.toString().replaceAll(":", "-");
-System.out.println(screenshotFolderPath);
-File f = new File(screenshotFolderPath);
-f.mkdirs();// create dynamic report folder name + screenshots
-
-ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportFolderPath);
-
-*/

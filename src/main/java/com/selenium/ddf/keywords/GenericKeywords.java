@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,15 +20,13 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+
 
 public class GenericKeywords extends UtilityKeywords{
-	
-	public ExtentTest test;
-	public SoftAssert softAssert;
+
 	
 	public WebDriver openBrowser(String browserName){
 	
@@ -109,7 +108,19 @@ public class GenericKeywords extends UtilityKeywords{
 		
 		public void inputText(String locator, String data) {
 			findDriverElement(locator).sendKeys(getElement(data));
-		}		
+		}	
+		
+
+		public void selectList(String locator,int option) {
+			WebElement e = findDriverElement(locator);
+			e.click();
+			Select item = new Select(e);
+	//		((JavascriptExecutor)driver).executeScript("var select = arguments[0]; for(var i = 0; i < select.options.length; i++){ if(select.options[i].text == arguments[1]){ select.options[i].selected = true; } }", item, option);
+
+			item.selectByIndex(option);
+		//	item.selectByVisibleText(option);
+			
+		}
 		
 		public void selectItem(String locator, String data) {
 			WebElement ele = findDriverElement(locator);
@@ -122,25 +133,16 @@ public class GenericKeywords extends UtilityKeywords{
 					sizes.get(i).click();
 				}
 			}
-			
-			
 		}
 		
+		public void clear(String locator) {
+			findDriverElement(locator).clear();
+		}	
 		
-		public void log(String msg) {
-			test.log(Status.INFO, msg);
+		public void acceptAlert() {
+			driver.switchTo().alert().accept();
 		}
 		
-		public void reportFail() {
-			softAssert.fail();
-		}
-		
-		
-		public void assertAll() {
-			softAssert.assertAll();
-		}
-		
-		
-		
+
 
 }

@@ -28,7 +28,7 @@ import reports.ExtentManager;
 
 public class ApplicationKeywords extends ValidationKeywords{		
 	
-	
+	WebDriver driver;
 	public ApplicationKeywords(ExtentTest test) {			
 		
 	try {				
@@ -40,6 +40,7 @@ public class ApplicationKeywords extends ValidationKeywords{
 	}	
 	softAssert = new SoftAssert();	
 	this.test = test;
+
 }
 	
 	public void defaultLogin() {

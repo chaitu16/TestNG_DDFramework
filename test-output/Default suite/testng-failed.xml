@@ -6,9 +6,8 @@
       <class name="testcases.rediff.Session">
         <methods>
           <include name="beforeMethod"/>
-          <include name="doLogin"/>
+          <include name="doLogin" invocation-numbers="0 1 2"/>
           <include name="quit"/>
-          <include name="doLogout"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>

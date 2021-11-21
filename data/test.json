@@ -1,0 +1,139 @@
+{
+	"testdata": [
+		{
+			"testname": "Login Test",
+			"parameters": [
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "ingenuity2021@tutanota.com",
+							"parametername": "email"
+						},
+						{
+							"parametervalue": "Selen!umTest123",
+							"parametername": "password"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "ashishthakur1983@gmail.com",
+							"parametername": "email"
+						},
+						{
+							"parametervalue": "pass@1234",
+							"parametername": "password"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "N",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "test@test.com",
+							"parametername": "email"
+						},
+						{
+							"parametervalue": "hello123",
+							"parametername": "password"
+						}
+					]
+				}
+			]
+		},
+		{
+			"testname": "Create Portfolio Test",
+			"parameters": [
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port1",
+							"parametername": "Portfolio name"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port2",
+							"parametername": "Portfolio name"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "N",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port3",
+							"parametername": "Portfolio name"
+						}
+					]
+				}
+			]
+		},
+		{
+			"testname": "Delete Portfolio Test",
+			"parameters": [
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port1",
+							"parametername": "Portfolio name"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "N",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port3",
+							"parametername": "Portfolio name"
+						}
+					]
+				},
+				{
+					"data": [
+						{
+							"parametervalue": "Y",
+							"parametername": "Runmode"
+						},
+						{
+							"parametervalue": "Port2",
+							"parametername": "Portfolio name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -107,7 +107,8 @@ public class GenericKeywords extends UtilityKeywords{
 		}
 		
 		public void inputText(String locator, String data) {
-			findDriverElement(locator).sendKeys(getElement(data));
+			//findDriverElement(locator).sendKeys(getElement(data));
+			findDriverElement(locator).sendKeys(data);
 		}	
 		
 
@@ -141,8 +142,18 @@ public class GenericKeywords extends UtilityKeywords{
 		
 		public void acceptAlert() {
 			driver.switchTo().alert().accept();
+			
 		}
 		
+		
+		public void driverWait() throws InterruptedException {
+			synchronized (driver){
+				driver.wait(8000);			
+			}
+			
+		}
+		
+
 
 
 }

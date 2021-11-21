@@ -19,6 +19,7 @@ public class BaseTest {
 	public ExtentReports reports;
 	public ExtentTest test;
 	public ApplicationKeywords app;
+	
 
 	@BeforeTest(alwaysRun=true)
 	public void beforeTest(ITestContext context) {
@@ -42,11 +43,11 @@ public class BaseTest {
 		
 	@BeforeMethod(alwaysRun=true)
 	public void beforeMethod(ITestContext context) {
-		System.out.println("Before Method");
+	//	System.out.println("Before Method");
 			test = (ExtentTest) context.getAttribute("test");
 			app = (ApplicationKeywords) context.getAttribute("app");
 			reports = (ExtentReports) context.getAttribute("reports");
-		 
+		
 		
 	}
 	

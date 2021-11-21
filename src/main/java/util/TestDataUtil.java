@@ -59,5 +59,24 @@ public class TestDataUtil {
 		return data;
 		
 	}
-
+	
+		
+	// true  - N
+		// false - Y
+		public boolean isSkip(String testName,Xls_Reader xls) {
+			for(int i=2;i<=xls.getRowCount("TestCases");i++) {
+				String testCase=xls.getCellData("TestCases", "Test Cases", i);
+				if(testCase.equals(testName)) {
+					String runmode = xls.getCellData("TestCases", "Runmode", i);
+					if(runmode.equals("Y"))
+						return false;
+					else
+						return true;
+				}
+			}
+			
+			return true;
+		}
+		
+		
 }
